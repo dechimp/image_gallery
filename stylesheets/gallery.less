@@ -1,0 +1,36 @@
+.thumbnail:hover {
+    background-color: transparent;
+    img {
+        border: 1px solid blue;
+    }
+    span {
+        visibility: visible;
+        top: 0;
+        left: 230px;
+        z-index: 50;
+    }
+}
+.gallerycontainer {
+    position: relative;
+}
+.thumbnail {
+    img {
+        border: 1px solid white;
+        margin: 0 5px 5px 0;
+    }
+    span {
+        position: absolute;
+        background-color: lightyellow;
+        padding: 5px;
+        left: -1000px;
+        border: 1px dashed gray;
+        visibility: hidden;
+        color: black;
+        text-decoration: none;
+        img {
+            border-width: 0;
+            padding: 2px;
+        }
+    }
+}
+

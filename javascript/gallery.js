@@ -1,18 +1,41 @@
 $(document).ready(function () {
 
-  // when I click an image thumbnail...
-  $('.thumbnail').on('click', function () {
+  var backgroundOption = $('.backgroundOption');
+  var thumbnail = $('.backgroundOption img.thumbnail');
+  var container = $('.preview_container');
+  var image_preview = container.find('.image_preview');
+  var color_preview = container.find('.color_preview');
+  color_preview.hide();
 
-    // store the path of the image...
-    var img_src = $(this).find('img').attr('src');
-    console.log('selected ' + img_src);
-
-    // mark the image as selected
-    $('.thumbnail').removeClass("selected");
+  backgroundOption.on('click', function () {
+    // ...mark the image as selected...
+    backgroundOption.removeClass("selected");
     $(this).addClass("selected");
-
-    // and display it in the preview container
-    $('.preview_container').find('img').attr('src', img_src);
   });
 
-});
+  thumbnail.on('click', function () {
+
+    // ...and display the image in the preview container.
+    color_preview.hide();
+    var img_src = $(this).attr('src');
+    image_preview.attr('src', img_src);
+    image_preview.show();
+  }); // end on click
+
+  $('.color_picker').on('click', function (e) {
+    image_preview.hide();
+    color_preview.show();
+  });
+
+  $('.deleteButton').on('click', function () {
+
+      var container = $(this).parent();
+      var img_name = container.find('img').attr('name');
+      var r = confirm('Remove image: ' + img_name + '?');
+      if (r==true)
+        // [insert code to remove the image from the application]
+        container.remove();
+      else
+        return;
+    }); // end on click
+}); // end ready()

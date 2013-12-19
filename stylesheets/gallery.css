@@ -1,32 +1,65 @@
 .gallery_container {
   position: relative;
 }
-.thumbnail_container {
-  float: left;
-}
 .preview_container {
   position: relative;
   padding: 5px;
   width: 300px;
-  height: 300px;
-  overflow: auto;
 }
-.preview_container img {
-  width: 270px;
-  height: auto;
-  overflow: auto;
+.preview_container .image_preview {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  width: 100%;
 }
-.thumbnail img {
+.preview_container #color_hex_edit {
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  font-size: 2.5em;
+}
+.backgroundOptionGroup {
+  position: relative;
+  width: 800px;
+}
+.backgroundOption {
+  position: relative;
+  display: inline-block;
+}
+.backgroundOption .thumbnail {
+  position: relative;
+  float: left;
+  opacity: .9;
   border: 1px solid white;
   margin: 0 5px 5px 0;
-  width: 100px;
-  height: auto;
+  height: 100px;
+  width: auto;
   overflow: auto;
   padding: 5px;
+  z-index: 0;
 }
-.thumbnail:hover {
-  background-color: green;
+.backgroundOption .deleteButton {
+  background-image: url("../media/x_red.png");
+  background-repeat: no-repeat;
+  opacity: .2;
+  border: none;
+  position: absolute;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  top: 10px;
+  right: 15px;
+  z-index: 50;
 }
-.thumbnail .selected img {
+.backgroundOption:hover .thumbnail {
+  opacity: 1;
+}
+.backgroundOption:hover .deleteButton {
+  opacity: 1;
+}
+.backgroundOption.selected {
   border: 1px solid red;
+}
+#colorpicker {
+  width: 200px;
+  height: 200px;
 }

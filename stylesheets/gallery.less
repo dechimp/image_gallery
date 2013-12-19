@@ -1,37 +1,70 @@
 .gallery_container {
     position: relative;
 }
-.thumbnail_container {
-  float: left;
-}
 .preview_container {
   position: relative;
   padding: 5px;
   width: 300px;
-  height: 300px;
-  overflow: auto;
-  img {
-    width: 270px;
-    height: auto;
-    overflow: auto;
+  .image_preview {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+  .color_preview {
+  }
+  #color_hex_edit {
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    font-size: 2.5em;
   }
 }
-.thumbnail {
-    img {
-        border: 1px solid white;
-        margin: 0 5px 5px 0;
-        width: 100px;
-        height: auto;
-        overflow: auto;
-        padding: 5px;
+.backgroundOptionGroup {
+  position: relative;
+  width: 800px;
+}
+.backgroundOption {
+  position: relative;
+  display: inline-block;
+  .thumbnail {
+      position: relative;
+      float: left;
+      opacity: .9;
+      border: 1px solid white;
+      margin: 0 5px 5px 0;
+      height: 100px;
+      width: auto;
+      overflow: auto;
+      padding: 5px;
+      z-index: 0;
+  }
+  .deleteButton {
+    background-image: url("../media/x_red.png");
+    background-repeat: no-repeat;
+    opacity: .2;
+    border: none;
+    position: absolute;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    top: 10px;
+    right: 15px;
+    z-index: 50;
+  }
+  &:hover {
+    .thumbnail {
+      opacity: 1;
     }
-    &:hover {
-        background-color: green;
+    .deleteButton {
+      opacity: 1;
     }
-    .selected {
-        img {
-            border: 1px solid red;
-        }
-    }
+  }
+  &.selected {
+    border: 1px solid red;
+  }
+}
+#colorpicker {
+  width: 200px;
+  height: 200px;
 }
 

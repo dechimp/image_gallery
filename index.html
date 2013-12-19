@@ -14,20 +14,45 @@
 <body>
 <div class="gallery_container">
 
-  <div class="preview_container" ><img src="" alt="select an image
-    or choose a color" /></div>
-  <div class="thumbnail_container">
-  <a class="thumbnail" href="#thumb"><img src="media/koala.jpg" /></a>
+  <div class="preview_container" >
+    <img src="" class="image_preview" alt="select an image or choose a color" />
+    <div class="color_preview">
+        <form><input type="text" id="color_hex_edit" name="color" value="#123456" /></form>
+    </div>
+  </div>
 
-  <a class="thumbnail" href="#thumb"><img src="media/piggie.jpg" /></a>
+  <div class="backgroundOptionGroup">
+    <div class="backgroundOption">
+        <img class="thumbnail" src="media/koala.jpg" name="koala" /> 
+        <div class="deleteButton"></div>
+    </div>
 
-  <a class="thumbnail" href="#thumb"><img src="media/tail.jpg" /></a> 
+    <div class="backgroundOption">
+        <img class="thumbnail" src="media/piggie.jpg" name="piggie" />
+        <div class="deleteButton"></div>
+    </div>
 
-  <a class="thumbnail" href="#thumb"><img src="media/hmmm.jpg" /></a>
+    <div class="backgroundOption">
+        <img class="thumbnail" src="media/tail.jpg" name="tail" />
+        <div class="deleteButton"></div>
+    </div>
 
-  <a class="thumbnail" href="#thumb"><img src="media/cat_beard.jpg" border="0" /><br /></a>
+    <div class="backgroundOption">
+        <img class="thumbnail" src="media/hmmm.jpg" name="hmmm" />
+        <div class="deleteButton"></div>
+    </div>
 
-</div>
-    
-  </body>
+    <div class="backgroundOption">
+      <img class="thumbnail" src="media/cat_beard.jpg"  name ="cat_beard" />
+        <div class="deleteButton"></div>
+    </div>
+    <div class="backgroundOption">
+      <div class="color_picker">
+        <div id="colorpicker"></div>
+      </div>
+    </div>
+  </div> <!-- backgroundOptionGroup -->
+
+</div> <!-- gallery_container -->
+</body>
 </html>

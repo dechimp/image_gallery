@@ -4,9 +4,8 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Image Gallery</title>
     <link rel="stylesheet" href="stylesheets/gallery.css" type="text/css" media="all" />
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="javascript/farbtastic.js"></script>
+    <script src="javascript/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="javascript/farbtastic.js" charset="utf-8"></script>
     <link rel="stylesheet" href="stylesheets/farbtastic.css" type="text/css" />
     <script src="javascript/colorpicker.js" type="text/javascript" charset="utf-8"></script>
     <script src="javascript/gallery.js" type="text/javascript" charset="utf-8"></script>
@@ -46,9 +45,13 @@
       <img class="thumbnail" src="media/cat_beard.jpg"  name ="cat_beard" />
         <div class="deleteButton"></div>
     </div>
+
     <div class="backgroundOption">
       <div class="color_picker">
         <div id="colorpicker"></div>
+        <div class="blocker">
+          <span>Click here to use a solid background</span>
+        </div>
       </div>
     </div>
   </div> <!-- backgroundOptionGroup -->

@@ -5,6 +5,7 @@ $(document).ready(function () {
   var container = $('.preview_container');
   var image_preview = container.find('.image_preview');
   var color_preview = container.find('.color_preview');
+  var color_edit = container.find('#color_hex_edit');
   color_preview.hide();
 
   backgroundOption.on('click', function () {
@@ -17,6 +18,7 @@ $(document).ready(function () {
 
     // ...and display the image in the preview container.
     color_preview.hide();
+    $('.blocker').show();
     var img_src = $(this).attr('src');
     image_preview.attr('src', img_src);
     image_preview.show();
@@ -25,6 +27,7 @@ $(document).ready(function () {
   $('.color_picker').on('click', function (e) {
     image_preview.hide();
     color_preview.show();
+    $(this).find('.blocker').hide();
   });
 
   $('.deleteButton').on('click', function () {
@@ -38,4 +41,14 @@ $(document).ready(function () {
       else
         return;
     }); // end on click
+
+    // color_edit.bind("enterKey",function(e){
+    // });
+    // color_edit.keyup(function(e){
+        // if(e.keyCode == 13)
+        // {
+          // $(this).trigger("enterKey");
+          // console.log('enter pressed');
+        // }
+    // });
 }); // end ready()

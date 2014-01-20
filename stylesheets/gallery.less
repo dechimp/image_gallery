@@ -4,24 +4,25 @@
 .preview_container {
   position: relative;
   padding: 5px;
-  width: 300px;
+  height: 18.75em;
+  width: 18.75em;
   .image_preview {
     background-color: transparent;
     background-repeat: no-repeat;
-    width: 100%;
+    height: 100%;
   }
   .color_preview {
   }
   #color_hex_edit {
-    height: 200px;
-    width: 200px;
+    height: 7.5em;
+    width: 7.5em;
     text-align: center;
     font-size: 2.5em;
   }
 }
 .backgroundOptionGroup {
   position: relative;
-  width: 800px;
+  width: 50em;
 }
 .backgroundOption {
   position: relative;
@@ -29,7 +30,7 @@
   .thumbnail {
       position: relative;
       float: left;
-      opacity: .9;
+      opacity: .7;
       border: 1px solid white;
       margin: 0 5px 5px 0;
       height: 100px;
@@ -52,19 +53,51 @@
     z-index: 50;
   }
   &:hover {
+    .deleteButton {
+      opacity: 1;
+    }
     .thumbnail {
       opacity: 1;
     }
-    .deleteButton {
+    #colorpicker {
       opacity: 1;
     }
   }
   &.selected {
     border: 1px solid red;
+    opacity: 1;
+    .thumbnail {
+      opacity: 1;
+    }
+    #colorpicker {
+      opacity: 1;
+    }
   }
-}
-#colorpicker {
-  width: 200px;
-  height: 200px;
+  #colorpicker {
+    opacity: .7;
+    width: 200px;
+    height: 200px;
+  }
+  .color_picker {
+    .blocker {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 200px;
+      background-color: grey;
+      z-index: 2;
+      opacity: .9;
+      /* filter: alpha(opacity = 90); */
+    }
+    span {
+      color: #000;
+      opacity: 1;
+      text-align: center;
+      width: 100%;
+      position: absolute;
+      top: 40%;
+    }
+  }
 }
 

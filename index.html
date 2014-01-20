@@ -3,46 +3,48 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Image Gallery</title>
-    <link rel="stylesheet" href="stylesheets/gallery.css" type="text/css" media="all" />
-    <script src="javascript/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
-    <script type="text/javascript" src="javascript/farbtastic.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="stylesheets/farbtastic.css" type="text/css" />
-    <script src="javascript/colorpicker.js" type="text/javascript" charset="utf-8"></script>
-    <script src="javascript/gallery.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="image-gallery/stylesheets/gallery.css" type="text/css" media="all" />
+    <script src="assets/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="assets/farbtastic/farbtastic.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="assets/farbtastic/farbtastic.css" type="text/css" />
+    <script src="image-gallery/javascript/colorpicker.js" type="text/javascript" charset="utf-8"></script>
+    <script src="image-gallery/javascript/gallery.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
-<div class="gallery_container">
+<section class="gallery_container">
 
-  <div class="preview_container" >
+  <header class="preview_container" >
     <img src="" class="image_preview" alt="select an image or choose a color" />
     <div class="color_preview">
-        <form><input type="text" id="color_hex_edit" name="color" value="#123456" /></form>
+        <form>
+          <input type="text" id="color_hex_edit" name="color" value="#123456" />
+        </form>
     </div>
-  </div>
+  </header>
 
-  <div class="backgroundOptionGroup">
+  <section class="backgroundOptionGroup">
     <div class="backgroundOption">
-        <img class="thumbnail" src="media/koala.jpg" name="koala" /> 
+        <img class="thumbnail" src="content/event_1/background_images/koala.jpg" name="koala" /> 
         <div class="deleteButton"></div>
     </div>
 
     <div class="backgroundOption">
-        <img class="thumbnail" src="media/piggie.jpg" name="piggie" />
+        <img class="thumbnail" src="content/event_1/background_images/piggie.jpg" name="piggie" />
         <div class="deleteButton"></div>
     </div>
 
     <div class="backgroundOption">
-        <img class="thumbnail" src="media/tail.jpg" name="tail" />
+        <img class="thumbnail" src="content/event_1/background_images/tail.jpg" name="tail" />
         <div class="deleteButton"></div>
     </div>
 
     <div class="backgroundOption">
-        <img class="thumbnail" src="media/hmmm.jpg" name="hmmm" />
+        <img class="thumbnail" src="content/event_1/background_images/hmmm.jpg" name="hmmm" />
         <div class="deleteButton"></div>
     </div>
 
     <div class="backgroundOption">
-      <img class="thumbnail" src="media/cat_beard.jpg"  name ="cat_beard" />
+      <img class="thumbnail" src="content/event_1/background_images/cat_beard.jpg"  name ="cat_beard" />
         <div class="deleteButton"></div>
     </div>
 
@@ -54,8 +56,8 @@
         </div>
       </div>
     </div>
-  </div> <!-- backgroundOptionGroup -->
+  </section> <!-- backgroundOptionGroup -->
 
-</div> <!-- gallery_container -->
+</section> <!-- gallery_container -->
 </body>
 </html>

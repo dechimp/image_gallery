@@ -1,15 +1,20 @@
 .gallery_container {
     position: relative;
+    width: 800px;
+    header {
+      clear: both;
+    }
 }
 .preview_container {
   position: relative;
   padding: 5px;
   height: 18.75em;
-  width: 18.75em;
+  display: inline-block;
   .image_preview {
     background-color: transparent;
     background-repeat: no-repeat;
     height: 100%;
+    max-width: 30em;
   }
   .color_preview {
   }
@@ -20,9 +25,11 @@
     font-size: 2.5em;
   }
 }
+
 .backgroundOptionGroup {
   position: relative;
   width: 50em;
+  clear: both;
 }
 .backgroundOption {
   position: relative;
@@ -83,8 +90,8 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 12.5em;
-      height: 12.5em;
+      width: 195px;
+      height: 195px;
       background-color: grey;
       z-index: 2;
       opacity: .9;

@@ -1,16 +1,21 @@
 .gallery_container {
   position: relative;
+  width: 800px;
+}
+.gallery_container header {
+  clear: both;
 }
 .preview_container {
   position: relative;
   padding: 5px;
   height: 18.75em;
-  width: 18.75em;
+  display: inline-block;
 }
 .preview_container .image_preview {
   background-color: transparent;
   background-repeat: no-repeat;
   height: 100%;
+  max-width: 30em;
 }
 .preview_container #color_hex_edit {
   height: 7.5em;
@@ -21,6 +26,7 @@
 .backgroundOptionGroup {
   position: relative;
   width: 50em;
+  clear: both;
 }
 .backgroundOption {
   position: relative;
@@ -79,8 +85,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 12.5em;
-  height: 12.5em;
+  width: 195px;
+  height: 195px;
   background-color: grey;
   z-index: 2;
   opacity: .9;

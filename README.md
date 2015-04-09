@@ -1,4 +1,4 @@
-Demo at [http://dechimp.work/image_gallery/]()
+[Demo](http://dechimp.work/image_gallery/)
 
 A form I made (but havent used) for picking an image or choosing a solid color.  It's more of a concept than a plugin. 
 

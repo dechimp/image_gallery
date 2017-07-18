@@ -62,14 +62,4 @@ $(document).ready(function () {
       else
         return;
     }); // end on click
-
-    // color_edit.bind("enterKey",function(e){
-    // });
-    // color_edit.keyup(function(e){
-        // if(e.keyCode == 13)
-        // {
-          // $(this).trigger("enterKey");
-          // console.log('enter pressed');
-        // }
-    // });
 }); // end ready()
